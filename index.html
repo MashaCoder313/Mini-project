@@ -3,12 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>List of projects</title>
+    <title>My Projects</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+        color: #333;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin: 20px 0;
+        color: #1f2937;
+        background: linear-gradient(90deg, #2563eb, #1d4ed8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 800px;
+        padding: 20px;
+      }
+
+      .project {
+        background: white;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 250px;
+        text-align: center;
+        overflow: hidden;
+        border-left: 5px solid #2563eb;
+      }
+
+      .project:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .project a {
+        display: block;
+        text-decoration: none;
+        color: #2563eb;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 10px;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .project a:hover {
+        color: #1d4ed8;
+        transform: scale(1.1);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .project {
+        animation: fadeIn 0.6s ease-in-out;
+      }
+    </style>
   </head>
   <body>
-    <h1>My Mini Projects With <b>HTML</b>, <b>CSS</b>, <b>JS</b></h1>
-    <ul>
-      <li><a href="./card-component/index.html">Card Component</a></li>
-    </ul>
+    <h1>My Mini Projects</h1>
+    <div class="projects-container">
+      <div class="project">
+        <a href="./card-component/index.html">Card Component</a>
+      </div>
+      <div class="project">
+        <a href="./loadmore/index.html">LoadMore & Costum-Scrool</a>
+      </div>
+    </div>
   </body>
 </html>

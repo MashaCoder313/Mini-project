@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MegaMenu</title>
+    <link rel="stylesheet" href="styles/app.css" />
+  </head>
+  <body>
+    <!-- Icon-Pack -->
+    <svg class="hidden">
+      <symbol id="shopping-bag" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+        />
+      </symbol>
+      <symbol
+        id="user"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+        />
+      </symbol>
+      <symbol
+        id="arrow-up"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m4.5 15.75 7.5-7.5 7.5 7.5"
+        />
+      </symbol>
+      <symbol id="banknotes" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+      </symbol>
+      <symbol id="arrow-left" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+      </symbol>
+      <symbol id="x-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+      </symbol>
+    </svg>
+    <header class="header">
+      <div class="container">
+
+        <div class="header-right">
+          <img src="./images/logo.png" alt="logo" class="header-logo" />
+
+          <!-- header List -->
+          <ul class="header-list">
+            <li class="header-item">
+              <a href="#" class="header-link">صفحه اصلی</a>
+            </li>
+            <li class="header-item header-item--with-icon">
+              <a href="#" class="header-link">محصولات</a>
+              <svg class="arrow-up-icon">
+                <use href="#arrow-up"></use>
+              </svg>
+              <div class="sub-menu__wrapper">
+                <div class="sub-menu__items">
+                  <div class="sub-menu__item-wrapper">
+                    <a href="#" class="sub-menu_item">
+                      <span>کفش مردانه</span>
+                      <svg class="sub-menu-icon">
+                        <use href="#arrow-up"></use>
+                      </svg>
+                    </a>
+                    <div class="sub-menu_links">
+                      <a href="#" class="sub-menu_link">کفش اسپرت مردانه</a>
+                      <a href="#" class="sub-menu_link">صندل مردانه</a>
+                      <a href="#" class="sub-menu_link">بوت مردانه</a>
+                      <a href="#" class="sub-menu_link">کفش کالج مردانه</a>
+                      <a href="#" class="sub-menu_link">دمپایی مردانه</a>
+                      <a href="#" class="sub-menu_link">نیم بوت مردانه</a>
+                      <a href="#" class="sub-menu_link">بوت مردانه</a>
+                    </div>
+                  </div>
+                  <div class="sub-menu__item-wrapper">
+                    <a href="#" class="sub-menu_item">
+                      <span>لباس های مردانه</span>
+                      <svg class="sub-menu-icon">
+                        <use href="#arrow-up" />
+                      </svg>
+                    </a>
+                    <div class="sub-menu_links">
+                      <a href="#" class="sub-menu_link">کفش اسپرت مردانه</a>
+                      <a href="#" class="sub-menu_link">صندل مردانه</a>
+                      <a href="#" class="sub-menu_link">بوت مردانه</a>
+                      <a href="#" class="sub-menu_link">دمپایی مردانه</a>
+                      <a href="#" class="sub-menu_link">نیم بوت مردانه</a>
+                    </div>
+                  </div>
+                  <div class="sub-menu__item-wrapper">
+                    <a href="#" class="sub-menu_item">
+                      <span>کفش زنانه</span>
+                      <svg class="sub-menu-icon">
+                        <use href="#arrow-up" />
+                      </svg>
+                    </a>
+                    <div class="sub-menu_links">
+                      <a href="#" class="sub-menu_link">کفش اسپرت مردانه</a>
+                      <a href="#" class="sub-menu_link">صندل مردانه</a>
+                      <a href="#" class="sub-menu_link">بوت مردانه</a>
+                      <a href="#" class="sub-menu_link">دمپایی مردانه</a>
+                    </div>
+                  </div>
+                  <div class="sub-menu__item-wrapper">
+                    <a href="#" class="sub-menu_item">
+                      <span>پالتو، بارانی و کاپشن مردانه</span>
+                      <svg class="sub-menu-icon">
+                        <use href="#arrow-up"></use>
+                      </svg>
+                    </a>
+                    <div class="sub-menu_links">
+                      <a href="#" class="sub-menu_link">صندل مردانه</a>
+                      <a href="#" class="sub-menu_link">بوت مردانه</a>
+                      <a href="#" class="sub-menu_link">کفش کالج مردانه</a>
+                      <a href="#" class="sub-menu_link">دمپایی مردانه</a>
+                      <a href="#" class="sub-menu_link">نیم بوت مردانه</a>
+                    </div>
+                  </div>
+                  <div class="sub-menu__item-wrapper">
+                    <a href="#" class="sub-menu_item">
+                      <span>کیف مردانه</span>
+                      <svg class="sub-menu-icon">
+                        <use href="#arrow-up"></use>
+                      </svg>
+                    </a>
+                    <div class="sub-menu_links">
+                      <a href="#" class="sub-menu_link">کفش اسپرت مردانه</a>
+                      <a href="#" class="sub-menu_link">صندل مردانه</a>
+                    </div>
+                  </div>
+                  <div class="sub-menu__item-wrapper">
+                    <a href="#" class="sub-menu_item">
+                      <span>اکسسوری زنانه</span>
+                      <svg class="sub-menu-icon">
+                        <use href="#arrow-up"></use>
+                      </svg>
+                    </a>
+                    <div class="sub-menu_links">
+                      <a href="#" class="sub-menu_link">کفش اسپرت مردانه</a>
+                      <a href="#" class="sub-menu_link">بوت مردانه</a>
+                      <a href="#" class="sub-menu_link">کفش کالج مردانه</a>
+                      <a href="#" class="sub-menu_link">نیم بوت مردانه</a>
+                      <a href="#" class="sub-menu_link">بوت مردانه</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-item">
+              <a href="#" class="header-link">بلاگ</a>
+            </li>
+            <li class="header-item">
+              <a href="#" class="header-link">درباره ما</a>
+            </li>
+            <li class="header-item">
+              <a href="#" class="header-link">تماس با ما</a>
+            </li>
+          </ul>
+        </div>
+
+      <!--   Header left   -->
+        <div class="header-left">
+          <div class="shopping-cart">
+            <button class="shopping-cart__button">
+              <span class="shopping-bag">3</span>
+              <svg class="shopping-icon">
+                <use href="#shopping-bag" />
+              </svg>
+            </button>
+            <div class="shopping-cart__content hidden">
+              <div class="shopping-cart__header">
+                <span class="shopping-cart__title">سبد خرید من</span>
+                <span class="shopping-cart__counter">3 مورد</span>
+              </div>
+
+              <!-- Cart Products -->
+              <article class="article">
+                <div class="product">
+                  <div class="product__details">
+                    <img class="product__image" src="./images/p1.png" alt="product">
+                    <div class="product__description">
+                      <a class="product__name">پولوشرت آستین کوتاه مردانه</a>
+                      <div class="product__price">
+                        <span class="product__price-number">2,500,000</span>
+                        <span class="product__price-unit">تومان</span>
+
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="product__remove-btn">
+                    <svg class="product__remove" >
+                      <use href="#x-circle"></use>
+                    </svg>
+                  </button>
+
+                </div>
+                <div class="product">
+                  <div class="product__details">
+                    <img class="product__image" src="./images/p2.png" alt="product">
+                    <div class="product__description">
+                      <a class="product__name">پولوشرت آستین کوتاه مردانه</a>
+                      <div class="product__price">
+                        <span class="product__price-number">2,500,000</span>
+                        <span class="product__price-unit">تومان</span>
+
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="product__remove-btn">
+                    <svg class="product__remove" >
+                      <use href="#x-circle"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="product">
+                  <div class="product__details">
+                    <img class="product__image" src="./images/p3.png" alt="product">
+                    <div class="product__description">
+                      <a class="product__name">پولوشرت آستین کوتاه مردانه</a>
+                      <div class="product__price">
+                        <span class="product__price-number">2,500,000</span>
+                        <span class="product__price-unit">تومان</span>
+
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="product__remove-btn">
+                    <svg class="product__remove" >
+                      <use href="#x-circle"></use>
+                    </svg>
+                  </button>
+                </div>
+              </article>
+
+              <div class="cart__footer">
+                <div class="cart__total-amount">
+                  <div class="cart__total-amount-title">
+                    <svg class="cart__total-amount-icon">
+                      <use href="#banknotes" />
+                    </svg>
+                    <span class="cart__total-amount-text">مجموعه هزینه :</span>
+                  </div>
+                  <div class="cart__total-amount-number">
+                    <span class="cart__total-amount-price">5,500,000</span>
+                    <span class="cart__total-amount-unit">تومان</span>
+                  </div>
+                </div>
+                <button class="cart__button">
+                  <span class="cart__button-text">تسویه حساب</span>
+                  <svg class="cart__button-icon">
+                    <use href="#arrow-left" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="auth-links">
+            <svg class="auth-links-icon">
+              <use href="#user" />
+            </svg>
+
+            <a href="#" class="auth-link">ورود</a>
+            <span>|</span>
+            <a href="#" class="auth-link">ثبت نام</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="container-shape"></div>
+    </main>
+
+    <div class="overlay hidden"></div>
+    <div class="cart-overlay hidden"></div>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>

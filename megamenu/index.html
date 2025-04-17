@@ -174,7 +174,7 @@
       >
         <path
           d="M9.57 5.92969L3.5 11.9997L9.57 18.0697"
-          stroke="white"
+          stroke="currentColor"
           stroke-width="1.5"
           stroke-miterlimit="10"
           stroke-linecap="round"
@@ -183,7 +183,7 @@
         <path
           opacity="0.4"
           d="M20.4999 12H3.66992"
-          stroke="white"
+          stroke="currentColor"
           stroke-width="1.5"
           stroke-miterlimit="10"
           stroke-linecap="round"
@@ -534,16 +534,14 @@
       <div class="container">
         <div class="header-right">
           <!--    mobile-menu    -->
-          <div class="mobile-menu">
-            <svg class="mobile-menu-icon">
+          <div class="mobile-nav">
+            <svg class="mobile-nav__menu-icon">
               <use href="#menu"></use>
             </svg>
           </div>
           <img src="./images/logo.png" alt="logo" class="header-logo" />
-
-          <!--    mobile-menu    -->
-          <div class="mobile-cart">
-            <svg class="mobile-cart-icon">
+          <div class="mobile-nav">
+            <svg class="mobile-nav__cart-icon">
               <use href="#shopping-bag"></use>
             </svg>
           </div>
@@ -784,13 +782,154 @@
     <main class="container">
       <div class="container-shape"></div>
     </main>
-    <main class="container">
-      <div class="container-shape"></div>
-    </main>
-    <main class="container">
-      <div class="container-shape"></div>
-    </main>
 
+    <div class="mobile-cart">
+      <div class="mobile-cart__header">
+        <p class="mobile-cart__title">سبد خرید من</p>
+        <svg class="mobile-cart__close-icon">
+          <use href="#close-circle"></use>
+        </svg>
+      </div>
+      <div class="mobile-cart__body">
+        <article class="article">
+          <div class="product">
+            <div class="product__details">
+              <img class="product__image" src="./images/p1.png" alt="product" />
+              <div class="product__description">
+                <a class="product__name"
+                  >پولوشرت مردانه آستین بلند دو خط محتوا</a
+                >
+                <div class="product__price">
+                  <span class="product__price-number">2,500,000</span>
+                  <span class="product__price-unit">تومان</span>
+                </div>
+              </div>
+            </div>
+            <svg class="product__remove-btn-icon">
+              <use href="#close-circle"></use>
+            </svg>
+          </div>
+          <div class="product">
+            <div class="product__details">
+              <img class="product__image" src="./images/p2.png" alt="product" />
+              <div class="product__description">
+                <a class="product__name">پولوشرت آستین کوتاه مردانه</a>
+                <div class="product__price">
+                  <span class="product__price-number">2,500,000</span>
+                  <span class="product__price-unit">تومان</span>
+                </div>
+              </div>
+            </div>
+            <svg class="product__remove-btn-icon">
+              <use href="#close-circle"></use>
+            </svg>
+          </div>
+          <div class="product">
+            <div class="product__details">
+              <img class="product__image" src="./images/p3.png" alt="product" />
+              <div class="product__description">
+                <a class="product__name">پولوشرت آستین کوتاه مردانه</a>
+                <div class="product__price">
+                  <span class="product__price-number">2,500,000</span>
+                  <span class="product__price-unit">تومان</span>
+                </div>
+              </div>
+            </div>
+            <svg class="product__remove-btn-icon">
+              <use href="#close-circle"></use>
+            </svg>
+          </div>
+        </article>
+        <div class="cart__footer cart__footer-mobile">
+          <div class="cart__total-amount">
+            <div class="cart__total-amount-title">
+              <svg class="cart__total-amount-icon">
+                <use href="#moneys"></use>
+              </svg>
+              <span class="cart__total-amount-text">مجموعه هزینه :</span>
+            </div>
+            <div class="cart__total-amount-number">
+              <span class="cart__total-amount-price">5,500,000</span>
+              <span class="cart__total-amount-unit">تومان</span>
+            </div>
+          </div>
+          <button class="cart__button">
+            <span class="cart__button-text">تسویه حساب</span>
+            <svg class="cart__button-icon">
+              <use href="#arrow-left"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-menu">
+      <header class="mobile-menu__header">
+        <img src="images/logo.png" alt="logo" />
+        <svg class="mobile-menu__close-icon">
+          <use href="#close-circle"></use>
+        </svg>
+      </header>
+
+      <main class="mobile-menu__body">
+        <article class="mobile-menu__wrapper">
+          <div>
+            <div class="mobile-menu__item">
+              <svg><use href="#home"></use></svg>
+              <a class="mobile-menu__link" href="#"> صفحه اصلی </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="mobile-menu__wrapper">
+          <div class="mobile-menu__wrapper--has-icon">
+            <div class="mobile-menu__item">
+              <svg><use href="#box"></use></svg>
+              <a class="mobile-menu__link" href="#"> محصولات</a>
+            </div>
+            <svg class="mobile-menu__arrow-icon">
+              <use href="#arrow-down"></use>
+            </svg>
+          </div>
+          <div class="mobile-menu__sub-menu">
+            <a href="#">کفش مردانه</a>
+            <a href="#">لباس های مردانه</a>
+            <a href="#">کفش زنانه</a>
+            <a href="#">پالتو، بارانی و کاپشن مردانه</a>
+            <a href="#">کیف مردانه</a>
+            <a href="#">اکسسوری زنانه</a>
+            <a href="#">دمپایی مردانه</a>
+          </div>
+        </article>
+
+        <article class="mobile-menu__wrapper">
+          <div>
+            <div class="mobile-menu__item">
+              <svg><use href="#blogger"></use></svg>
+              <a class="mobile-menu__link" href="#">مقالات </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="mobile-menu__wrapper">
+          <div>
+            <div class="mobile-menu__item">
+              <svg><use href="#call-calling"></use></svg>
+              <a class="mobile-menu__link" href="#">تماس با ما</a>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <button type="button" class="mobile-menu__btn">
+        <span class="mobile-menu__btn-text">ورود | عضویت</span>
+        <svg class="mobile-menu__icon">
+          <use href="#arrow-left"></use>
+        </svg>
+      </button>
+    </div>
+
+    <!--  Mobile Menu -->
     <div class="nav">
       <nav class="nav-bar">
         <div class="nav-links nav-links-right">

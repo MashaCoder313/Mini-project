@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop Up</title>
+    <link rel="stylesheet" href="styles/app.css" />
+  </head>
+  <body>
+    <button class="button" type="button">
+      <span>عضویت در خبرنامه</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <path
+          d="M10.07 5.93018L4 12.0002L10.07 18.0702"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          opacity="0.4"
+          d="M21 12H4.16998"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+    <div class="popup__box">
+      <img src="images/vector.png" alt="vector" />
+      <div class="box-text">
+        <p>شماره شما ثبت شد</p>
+        <p>و با موفقیت عضو خبرنامه شدید:)</p>
+      </div>
+
+      <div class="popup-box__close-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M7.7572 7.75732L16.2425 16.2426"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M7.75715 16.2426L16.2424 7.75732"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div class="overlay"></div>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

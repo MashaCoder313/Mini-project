@@ -602,6 +602,9 @@ body {
   height: 16px;
   cursor: pointer;
 }
+.rotate {
+  transform: rotate(180deg);
+}
 .mobile-menu__sub-menu {
   display: none;
   flex-direction: column;

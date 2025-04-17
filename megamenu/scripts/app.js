@@ -74,6 +74,7 @@ const closeMobileMenuItems = () => {
 
 const opinOrCloseSubMenuHandler = () => {
   mobileMenuSubMenuElem.classList.toggle("mobile-menu__sub-menu--show");
+  opinOrCloseSubMenu.classList.toggle("rotate");
 };
 headerItem.addEventListener("mouseover", showOverlay);
 headerItem.addEventListener("mouseout", closeOverlay);

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Filter</title>
+    <link rel="stylesheet" href="./styles/app.css">
+</head>
+<body>
+<button class="filter-btn" type="button" >
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.40039 2.09961H18.6004C19.7004 2.09961 20.6004 2.99961 20.6004 4.09961V6.29961C20.6004 7.09961 20.1004 8.09961 19.6004 8.59961L15.3004 12.3996C14.7004 12.8996 14.3004 13.8996 14.3004 14.6996V18.9996C14.3004 19.5996 13.9004 20.3996 13.4004 20.6996L12.0004 21.5996C10.7004 22.3996 8.90039 21.4996 8.90039 19.8996V14.5996C8.90039 13.8996 8.50039 12.9996 8.10039 12.4996L4.30039 8.49961C3.80039 7.99961 3.40039 7.09961 3.40039 6.49961V4.19961C3.40039 2.99961 4.30039 2.09961 5.40039 2.09961Z" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <path opacity="0.4" d="M10.93 2.09961L6 9.99961" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>فیلتر</span>
+</button>
+<div class="filter-container">
+    <div class="filter-header">
+        <span>فیلتر</span>
+        <svg class="filter-header__close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#1D2939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <g opacity="0.4">
+                <path d="M9.16992 14.8299L14.8299 9.16992" stroke="#1D2939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.8299 14.8299L9.16992 9.16992" stroke="#1D2939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+        </svg>
+    </div>
+    <div class="filter-body">
+        <div class="select-color">
+            <div class="select-color__header">
+                <span>انتخاب رنگ</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.6004 7.4585L11.1671 12.8918C10.5254 13.5335 9.47539 13.5335 8.83372 12.8918L3.40039 7.4585" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="select-color__items">
+                <div class="select-color__item">
+                    <div class="select-color__icon" style="background:#7B4800;"></div>
+                    <label class="select-color__name">
+                        <span>قهوه ای</span>
+                        <input class="select-color__checkbox" type="checkbox">
+                        <span class="select-color__box"></span>
+
+                    </label>
+                </div>
+                <div class="select-color__item">
+                    <div class="select-color__icon" style="background:#230069;"></div>
+                    <label class="select-color__name">
+                        <span>آبی کاربنی</span>
+                        <input class="select-color__checkbox" type="checkbox">
+                        <span class="select-color__box"></span>
+
+                    </label>
+                </div>
+                <div class="select-color__item">
+                    <div class="select-color__icon" style="background:#E8F220;"></div>
+                    <label class="select-color__name">
+                        <span>زرد</span>
+                        <input class="select-color__checkbox" type="checkbox">
+                        <span class="select-color__box"></span>
+
+                    </label>
+                </div>
+                <div class="select-color__item">
+                    <div class="select-color__icon" style="background:#9D0059;"></div>
+                    <label class="select-color__name">
+                        <span>صورتی چرک</span>
+                        <input class="select-color__checkbox" type="checkbox">
+                        <span class="select-color__box"></span>
+
+                    </label>
+                </div>
+                <div class="select-color__item">
+                    <div class="select-color__icon" style="background:#FF0000;"></div>
+                    <label class="select-color__name">
+                        <span>قرمز</span>
+                        <input class="select-color__checkbox" type="checkbox">
+                        <span class="select-color__box"></span>
+
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="filter-toggle">
+            <span>فقط کالاهای موجود</span>
+            <label class="filter-toggle__label">
+                <input type="checkbox" class="filter-toggle__checkbox">
+                <span class="filter-toggle__shape"></span>
+            </label>
+        </div>
+        <div class="filter-toggle">
+            <span>کالاهای تخفیف خورده</span>
+            <label class="filter-toggle__label">
+                <input type="checkbox" class="filter-toggle__checkbox">
+                <span class="filter-toggle__shape"></span>
+            </label>
+        </div>
+    </div>
+    <div class="filter-footer">
+        <button class="filter-footer-btn">اعمال فیلتر</button>
+    </div>
+
+    <script src="scripts/app.js"></script>
+</div>
+</body>
+</html>

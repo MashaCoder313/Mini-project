@@ -177,9 +177,15 @@ body{
 .product-box__img:hover ~ .product-box__img-left {
     filter: blur(2px);
 }
+.product-box__img:hover ~ .product-box__img-right {
+    transform: rotate(8deg);
+}
+.product-box__img:hover ~ .product-box__img-left {
+    transform: rotate(-8deg);
+
+}
 .product-box__img:hover ~ .product-box__comment {
-    transform: scale(1);
-    right: -90px;
+    transform: scale(1) translateX(100px);
 }
 
 .product-box__img-right {
@@ -220,7 +226,7 @@ body{
     transform: scale(0);
     transition: all 260ms 20ms;
     position: absolute;
-    right: 100px;
+    right: 10px;
     top: 32px;
 }
 .product-box__comment h3 {

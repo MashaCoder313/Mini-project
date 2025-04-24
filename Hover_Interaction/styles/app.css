@@ -1,0 +1,232 @@
+@font-face {
+    font-family: "YekanBakh-Regular";
+    src: local("YekanBakh-Regular"), url("./../fonts/YekanBakh-Regular.woff");
+}
+@font-face {
+    font-family: "YekanBakh-Bold";
+    src: local("YekanBakh-Bold"), url("./../fonts/YekanBakh-Bold.woff");
+}
+
+
+/*? Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*? App CSS */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    height: 100vh;
+    color: #1D2939;
+    line-height: 1.5;
+}
+.container {
+    margin: 100px auto;
+    display: flex;
+    flex-direction: row;
+   column-gap:  84px;
+}
+.product-box {
+    position: relative;
+    width: 280px;
+    /*height: 432px;*/
+    padding: 32px 0;
+    background: #F6F6F6;
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.product-box__img {
+    margin-bottom: 16px;
+    z-index: 10;
+    transition: all 30ms 20ms;
+}
+.product-box__img:hover {
+    transform: rotate(-8deg) translateY(-20px) scale(1.2);
+}
+.product-box__img:hover ~ .product-box__img-right,
+.product-box__img:hover ~ .product-box__img-left {
+    filter: blur(2px);
+}
+.product-box__img:hover ~ .product-box__comment {
+    transform: scale(1);
+    right: -90px;
+}
+
+.product-box__img-right {
+    position: absolute;
+    top: 64px;
+    right: 20px;
+    transition: all 30ms 20ms;
+}
+.product-box__img-left {
+    position: absolute;
+    bottom: 104px;
+    left: 20px;
+    transition: all 30ms 20ms;
+}
+.product-box__text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.product-box__text h3 {
+    font-size: 18px;
+    font-family: "YekanBakh-Bold", sans-serif;
+}
+.product-box__text p {
+    font-size: 18px;
+    font-family:  "YekanBakh-Regular", sans-serif;
+}
+.product-box__comment {
+    width: 180px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 50px 12px 50px 12px;
+    padding: 16px;
+    border: 1px solid rgba(229, 229, 229, 0.5);
+    text-align: center;
+    z-index: 5;
+    transform: scale(0);
+    transition: all 260ms 20ms;
+    position: absolute;
+    right: 100px;
+    top: 32px;
+}
+.product-box__comment h3 {
+    font-family:  "YekanBakh-Bold", sans-serif;
+}
+.product-box__comment p {
+    font-family:  "YekanBakh-Regular", sans-serif;
+    font-size: 14px;
+}

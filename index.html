@@ -1,120 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Projects</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-        color: #333;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini UI Projects Showcase</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      h1 {
-        font-size: 3rem;
-        margin: 20px 0;
-        color: #1f2937;
-        background: linear-gradient(90deg, #2563eb, #1d4ed8, #9333ea);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        letter-spacing: 2px;
-        font-weight: bold;
-        margin: 20px 0;
-      }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #f1f5f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
 
-      .projects-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        max-width: 800px;
-        padding: 20px;
-      }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, #38bdf8, #6366f1, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+      animation: fadeInDown 0.8s ease-in-out;
+      text-align: center;
+    }
 
-      .project {
-        background: white;
-        padding: 15px;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        width: 250px;
-        text-align: center;
-        overflow: hidden;
-        border-left: 5px solid #2563eb;
-      }
+    p.subtitle {
+      font-size: 1.1rem;
+      color: #94a3b8;
+      margin-bottom: 40px;
+      text-align: center;
+      max-width: 600px;
+      animation: fadeInDown 1s ease-in-out;
+    }
 
-      .project:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      }
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      max-width: 1000px;
+    }
 
-      .project a {
-        display: block;
-        text-decoration: none;
-        color: #2563eb;
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-top: 10px;
-        transition: color 0.3s ease, transform 0.3s ease;
-      }
+    .project {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 25px 20px 20px;
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 260px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.7s ease-in-out both;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
 
-      .project a:hover {
-        color: #1d4ed8;
-        transform: scale(1.1);
-      }
+    .project:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+    .project a {
+      color: #a5f3fc;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-      .project {
-        animation: fadeIn 0.6s ease-in-out;
+    .project a:hover {
+      color: #facc15;
+    }
+
+    .project::before {
+      content: attr(data-number);
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      animation: popIn 0.8s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
       }
-    </style>
-  </head>
-  <body>
-    <h1>My Mini Projects</h1>
-    <div class="projects-container">
-      <div class="project">
-        <a href="./card-component/index.html">Card Component</a>
-      </div>
-      <div class="project">
-        <a href="./loadmore/index.html">LoadMore & Custom-Scrool</a>
-      </div>
-      <div class="project">
-        <a href="./megamenu/index.html">MegaMenu</a>
-      </div>
-      <div class="project">
-        <a href="./popup/index.html">Popup</a>
-      </div>
-      <div class="project">
-        <a href="./Accordion/index.html">Accordion</a>
-      </div>
-      <div class="project">
-        <a href="./Filter/index.html">Filter</a>
-      </div>
-      <div class="project">
-        <a href="./form/index.html">form</a>
-      </div>
-      <div class="project">
-        <a href="./Hover_Interaction/index.html">Hover Interaction</a>
-      </div>
-    </div>
-  </body>
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      80% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+<h1>✨ Mini UI Projects Showcase ✨</h1>
+<p class="subtitle">A collection of practical mini components built to improve your frontend skills and design thinking.</p>
+
+<div class="projects-container">
+  <div class="project" data-number="1">
+    <a href="./card-component/index.html">Card Component</a>
+  </div>
+  <div class="project" data-number="2">
+    <a href="./loadmore/index.html">Load More + Scroll</a>
+  </div>
+  <div class="project" data-number="3">
+    <a href="./megamenu/index.html">Mega Menu</a>
+  </div>
+  <div class="project" data-number="4">
+    <a href="./popup/index.html">Popup Modal</a>
+  </div>
+  <div class="project" data-number="5">
+    <a href="./Accordion/index.html">Accordion UI</a>
+  </div>
+  <div class="project" data-number="6">
+    <a href="./Filter/index.html">Content Filter</a>
+  </div>
+  <div class="project" data-number="7">
+    <a href="./form/index.html">Form Validation</a>
+  </div>
+  <div class="project" data-number="8">
+    <a href="./Hover_Interaction/index.html">Hover Interaction</a>
+  </div>
+  <div class="project" data-number="9">
+    <a href="./button/index.html">Button Effects</a>
+  </div>
+</div>
+</body>
 </html>
